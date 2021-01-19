@@ -1,0 +1,143 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: lightblue;
+  position: relative;
+  margin: 2em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(100, 100, 100, 0.4);
+}
+.overlay .modal {
+  width: 65vw;
+  margin: 50vh auto;
+  top: -200px;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #778;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+.overlay .modal .arrows {
+  display: none;
+  justify-content: space-between;
+  font-size: 20px;
+  color: Blue;
+}
+.overlay .modal .arrows button {
+  margin: 0;
+  background-color: lightgrey;
+  border: 0;
+  border-radius: 5px;
+}
+.overlay .modal .modal-close {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+.overlay .modal .avatar {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  height: 80px;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  margin: 0;
+}
+.grid-container .card {
+  background-color: rgba(100, 100, 100, 0.4);
+  border: 2px solid lightcoral;
+  border-radius: 10px;
+  text-align: center;
+}
+.grid-container .card .avatar {
+  border-radius: 50%;
+  padding: 1em;
+  height: 80px;
+}
+.grid-container .card .text-container {
+  margin: auto 0;
+  font-size: 0.9em;
+}
+.grid-container .card .text-container h2 {
+  font-size: 1.2em;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+  .grid-container .card {
+    display: flex;
+  }
+  .grid-container .card .text-container {
+    text-align: left;
+  }
+
+  .overlay .modal {
+    width: 40vw;
+    margin: 35% auto;
+    top: -100px;
+  }
+}
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin: 0 auto;
+  }
+  .grid-container .card {
+    max-width: 350px;
+    display: flex;
+    height: 15vh;
+    margin: auto 0;
+  }
+  .grid-container .card .avatar {
+    margin: auto 0;
+  }
+  .grid-container .text-container {
+    text-align: left;
+  }
+  .grid-container .text-container h2 {
+    margin-bottom: 0;
+  }
+  .grid-container .text-container .email {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+  }
+  .grid-container .text-container .address {
+    margin-top: 0;
+  }
+
+  .overlay .modal {
+    max-width: 375px;
+    margin: 30% auto;
+    top: -280px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
